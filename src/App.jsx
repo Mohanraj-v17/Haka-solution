@@ -45,6 +45,17 @@ export default function App() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const pageTitles = {
+      home: 'HAKA SOLUTIONS | Enterprise Digital Operations',
+      about: 'About Us | HAKA SOLUTIONS',
+      services: 'Core Services | HAKA SOLUTIONS',
+      solutions: 'Featured Solutions | HAKA SOLUTIONS',
+      technology: 'Technology & Security Stack | HAKA SOLUTIONS',
+      portfolio: 'Portfolio & Case Studies | HAKA SOLUTIONS',
+      contact: 'Contact Team | HAKA SOLUTIONS'
+    };
+    document.title = pageTitles[currentPage] || 'HAKA SOLUTIONS | Enterprise Digital Operations';
   }, [currentPage]);
 
   return (
